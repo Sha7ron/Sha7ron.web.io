@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <title>INDIAN EXPRESS</title>
+    <style>
+         .nav {
+            display: flex;
+            height: 10vh;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .items {
+            margin: 3px;
+            padding: 3px;
+        }
+
+        .items1 {
+            width: 1200px;
+        }
+
+        .grid {
+            margin: 30px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 900px;
+            justify-content: center;
+            row-gap: 30px;
+        }
+
+        .column {
+            height: 120px;
+            width: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 120px;
+
+        }
+
+        .row {
+            height: 120px;
+            width: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* font-family: "DM Mono", monospace; */
+            border: 2px solid rgb(230, 230, 230);
+            border-radius: 10px;
+            background-color: rgb(230, 230, 230);
+        }
+
+        .seat {
+            margin: 5px;
+            padding: 5px;
+            height: 30px;
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: powderblue;
+        }
+        
+        .font {
+            font-family: "Pixelify Sans", sans-serif;
+            font-size: xx-large;
+        }
+
+        .seat.selected {
+            background-color: #ffcc00;
+        }
+
+        .seat.booked {
+            background-color: #ff6347;
+            cursor: not-allowed;
+        }
+        .center{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+        .button{
+            color: rgba(148, 222, 231);
+            background-color: rgb(30, 120, 136);
+            border: 2px solid rgb(148, 222, 231);
+            border-radius: 30px;
+            margin: 10px top;
+            padding: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .button:disabled {
+            background-color: #8dc3cc;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class=" items items1">
+                <img src="vada club.png" alt="vada_club" height="70px">
+            </div>
+            <div class="items">
+                <img src="language.png" alt="language" height="30px">
+            </div>
+        </div>
+        <div class="center font">
+            INDIAN EXPRESS
+        </div>
+        <div class="grid">
+            <div class="column">
+                <div class="row">
+                    <div class="seat_row">
+                        <div class="seat" data-seat="1"></div>
+                        <div class="seat" data-seat="3"></div>
+                    </div>
+                    <div class="seat_row">
+                        <div class="seat" data-seat="2"></div>
+                        <div class="seat" data-seat="4"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="seat_row">
+                        <div class="seat" data-seat="5"></div>
+                        <div class="seat" data-seat="7"></div>
+                    </div>
+                    <div class="seat_row">
+                        <div class="seat" data-seat="6"></div>
+                        <div class="seat" data-seat="8"></div>
+                    </div>
+                </div>
+               
+
+            </div>
+            <div class="column">
+
+                <div class="row">
+                    <div class="seat_row">
+                        <div class="seat" data-seat="9"></div>
+                        <div class="seat" data-seat="11"></div>
+                    </div>
+                    <div class="seat_row">
+                        <div class="seat" data-seat="10"></div>
+                        <div class="seat" data-seat="12"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="seat_row">
+                        <div class="seat" data-seat="13"></div>
+                        <div class="seat" data-seat="15"></div>
+                    </div>
+                    <div class="seat_row">
+                        <div class="seat" data-seat="14"></div>
+                        <div class="seat" data-seat="16"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="column">
+
+                <div class="row">
+                    <div class="seat_row">
+                        <div class="seat" data-seat="17"></div>
+                        <div class="seat" data-seat="19"></div>
+                    </div>
+                    <div class="seat_row">
+                        <div class="seat" data-seat="18"></div>
+                        <div class="seat" data-seat="20"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="seat_row">
+                        <div class="seat" data-seat="21"></div>
+                        <div class="seat" data-seat="23"></div>
+                    </div>
+                    <div class="seat_row">
+                        <div class="seat" data-seat="22"></div>
+                        <div class="seat" data-seat="24"></div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="column">
+                <div class="row">
+                    <div class="seat_row">
+                        <div class="seat" data-seat="25"></div>
+                        <div class="seat" data-seat="27"></div>
+                    </div>
+                    <div class="seat_row">
+                        <div class="seat" data-seat="26"></div>
+                        <div class="seat" data-seat="28"></div>
+                    </div>
+                </div>
+                
+               
+            </div>
+        </div>
+        <div class="center">
+            <button class="button" id="bookBtn" disabled>Book Selected Seats</button>
+        </div>
+    </div>
+    <script>
+        const seats = document.querySelectorAll('.seat');
+        const bookBtn = document.getElementById('bookBtn');
+        let selectedSeats = [];
+
+        seats.forEach(seat => {
+            seat.addEventListener('click', () => {
+                if (!seat.classList.contains('booked')) {
+                    seat.classList.toggle('selected');
+
+                    // Update selected seats array
+                    const seatNumber = seat.dataset.seat;
+                    if (selectedSeats.includes(seatNumber)) {
+                        selectedSeats = selectedSeats.filter(s => s !== seatNumber);
+                    } else {
+                        selectedSeats.push(seatNumber);
+                    }
+
+                    // Enable or disable the booking button
+                    bookBtn.disabled = selectedSeats.length === 0;
+                }
+            });
+        });
+
+        bookBtn.addEventListener('click', () => {
+            if (selectedSeats.length > 0) {
+                alert(`You have booked seats: ${selectedSeats.join(', ')}`);
+                var isTrue = confirm("CONFIRM ORDER")
+                if(isTrue){
+                    window.location.href = 'prjbill.html'
+                }else{
+                    selectedSeats.forEach(seatNumber => {
+                        const seat = Array.from(seats).find(s => s.dataset.seat === seatNumber);
+                        seat.classList.add('booked');
+                        seat.classList.remove('selected');
+                    });
+                    selectedSeats = [];
+                    bookBtn.disabled = true;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

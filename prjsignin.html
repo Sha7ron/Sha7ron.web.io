@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <title>VADA CLUB SIGNIN</title>
+    <style>
+        body {
+            background-image: url('bg3.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+        }
+
+        .nav {
+            display: flex;
+            margin: 10px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .box {
+            margin: 30px auto;
+            width: 30vw;
+            background-color: rgb(233, 233, 233);
+            border: 2px solid rgba(222, 214, 214, 0.767);
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 420px;
+            justify-content: center;
+            row-gap: 30px;
+        }
+
+        form {
+            margin: 10PX auto;
+            padding: 5px;
+        }
+
+        .font {
+            font-family: "Pixelify Sans", sans-serif;
+            font-size: large;
+        }
+
+        input {
+            margin: auto;
+            border: 1px solid black;
+            height: 5vh;
+            width: 27vw;
+            border: 2pz solid black;
+            border-radius: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: transparent;
+        }
+
+        .btn {
+            color: rgba(148, 222, 231);
+            background-color: rgb(30, 120, 136);
+            border: 2px solid rgb(148, 222, 231);
+            border-radius: 30px;
+            margin: 10px top;
+            padding: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .btn2 {
+            color: rgba(148, 222, 231);
+            background-color: rgb(30, 120, 136);
+            border: 2px solid rgb(148, 222, 231);
+            border-radius: 30px;
+            margin: 10px top;
+            padding: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="items">
+                <img src="vada_club__1_-removebg-preview.png" alt="logo" height="120px">
+            </div>
+        </div>
+        <div class="box">
+            <form>
+                <div class="font" style="margin: auto; font-size: xx-large;">
+                    <b>VADA CLUB</b>
+                </div>
+                <br>
+                <label class="font" for="clgid">COLLEGE ID</label>
+                <div class="input-box">
+                    <input type="text" name="clgid" placeholder="  COLLEGE ID"></input>
+                </div>
+                <br>
+                <label class="font" for="pswd">PASSWORD</label>
+                <div class="input-box">
+                    <input type="text" name="pswd" placeholder="  PASSWORD"></input>
+                </div>
+                <br>
+                <div>
+                    <button class="btn" type="button" onclick="window.location.href='prjhotel.html';">SIGN IN</button>
+
+                    <button class="btn2" type="button" onclick="window.location.href='prjlogin.html';">CREATE ACCOUNT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+</html>

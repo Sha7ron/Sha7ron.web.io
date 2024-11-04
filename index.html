@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <title>Navigation Bar Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+        background-image: url('bt.png');
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        nav ul li {
+            float: left;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        #content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+
+        .font {
+            font-family: "Pixelify Sans", sans-serif;
+            font-size: xx-large;
+        }
+        
+        .styled-button {
+            background-color: #4CAF50; 
+            color: white; 
+            border: none; 
+            padding: 50px 50px; 
+            text-align: center; 
+            text-decoration: none; 
+            display: inline-block; 
+            font-size: 16px; 
+            margin: 30px 0; 
+            cursor: pointer; 
+            border-radius: 5px; 
+            transition: background-color 0.3s; 
+        }
+
+        .styled-button:hover {
+            background-color: #45a049; 
+        }
+
+        .buttonclass{
+            display: flex ;
+            justify-content: center;
+        }
+        .btn{
+            padding: 12px;
+            background-color: aqua;
+        }
+        h1,p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <br>
+        <img class="logo" src="vada club.png" alt="vadaclub">
+        <br><br><br>
+        <h1 class="font">WELCOME TO VADA CLUB</h1>
+        <p>Select Your Favourite Food Spot Through Us!</p>
+    <div class="buttonclass"> <button class="btn" type="submit" onclick="window.location.href='prjsignin.html';">GET STARTED!</button>
+    </div>
+       
+
+    </div>
+</body>
+</html>

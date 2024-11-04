@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+        
+    <title>VADA CLUB REGISTRATION</title>
+    <style>
+        body {
+            background-color: rgba(77, 189, 204, 0.522);
+        }
+
+        .nav {
+            display: flex;
+            margin: 10px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .font {
+            font-family: "Pixelify Sans", sans-serif;
+            font-size: medium;
+        }
+
+        .box {
+            margin: 30px auto;
+            width: 30vw;
+            background-color: rgb(233, 233, 233);
+            border: 2px solid rgba(222, 214, 214, 0.767);
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 420px;
+            justify-content: center;
+            row-gap: 30px;
+        }
+
+        input {
+            margin: auto;
+            border: 1px solid black;
+            height: 5vh;
+            width: 27vw;
+            border-radius: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background: transparent;
+        }
+
+        .item1 {
+            margin: 10px;
+            padding: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .item2 {
+            display: grid;
+            justify-content: center;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .btn {
+            color: rgba(148, 222, 231);
+            background-color: rgb(30, 120, 136);
+            border: 2px solid rgb(148, 222, 231);
+            border-radius: 30px;
+            margin: 10px top;
+            padding: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class="items">
+                <img src="vada_club__1_-removebg-preview.png" alt="logo" height="120px">
+            </div>
+        </div>
+        <div class="box">
+            <form id="form">
+                <div class="input-box">
+                    <label class="font" for="name">NAME</label>
+                    <input type="text" name="name" placeholder="USERNAME" id="name" required>
+                </div>
+                <div class="input-box">
+                    <label class="font" for="clgid">COLLEGE ID</label>
+                    <input type="text" name="clgid" placeholder="COLLEGE ID" id="clgid" required>
+                </div>
+                <div class="input-box">
+                    <label class="font" for="usrname">USERNAME</label>
+                    <input type="text" name="usrname" placeholder="USERNAME" id="usrname" required>
+                </div>
+                <div class="input-box">
+                    <label class="font" for="pswd">PASSWORD</label>
+                    <input type="password" name="pswd" placeholder="PASSWORD" id="pswd" required>
+                </div>
+                <div class="input-box">
+                    <label class="font" for="repswd">CONFIRM PASSWORD</label>
+                    <input type="password" name="repswd" placeholder="PASSWORD" required>
+                </div>
+                <div class="item2">
+                    <button class="btn" type="submit">CREATE ACCOUNT</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+           document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            const name = document.getElementById('name').value.trim();
+            const clgid = document.getElementById('clgid').value.trim();
+            const usrname = document.getElementById('usrname').value.trim();
+            const pswd = document.getElementById('pswd').value;
+            const repswd = document.querySelector('input[name="repswd"]').value;
+        
+            if (name === '') {
+                alert('Please enter your name');
+                return;
+            }
+        
+            if (clgid === '') {
+                alert('Please enter your college ID');
+                return;
+            }
+
+            if (usrname === '') {
+                alert('Please enter your username');
+                return;
+            }
+        
+            if (pswd.length < 6) {
+                alert('Password must be at least 6 characters long');
+                return;
+            }
+        
+            if (pswd !== repswd) {
+                alert('Passwords do not match');
+                return;
+            }
+        
+            alert("ACCOUNT CREATED!");
+            window.location.href = `prjaccount.html?name=${encodeURIComponent(name)}&clgid=${encodeURIComponent(clgid)}&usrname=${encodeURIComponent(usrname)}`;
+
+        });
+    </script>
+</body>
+
+</html>

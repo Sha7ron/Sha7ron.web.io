@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <title>User Account</title>
+    <style>
+        body{
+            background-image: url(milad-fakurian-iFu2HILEng8-unsplash\ \(1\).png);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+        .nav {
+            display: flex;
+            height: 10vh;
+            margin: 10px;
+            padding: 10px;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: 480px 900px;
+            gap: 20px 10px;
+        }
+
+        .items {
+            margin-left: 30px;
+            width: 480px;
+            height: 80vh;
+        }
+
+        .items2 {
+            margin-left: 50px;
+            width: 900px;
+            height: 80vh;
+            border: 2px solid rgb(30, 120, 136);
+            border-radius: 10px;
+            background-color: rgba(148, 222, 231);
+        }
+
+        .item3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .item4 {
+            font-family: "Pixelify Sans", sans-serif;
+            font-size: x-large;
+            margin: 5px;
+            padding: 5px;
+        }
+
+        .accountinfo {
+            margin: auto;
+            width: 380px;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(148, 222, 231);
+            border: 2px solid rgb(30, 120, 136);
+            border-radius: 12px;
+        }
+
+        .userimg {
+            margin: 5px auto;
+            padding: 20px;
+        }
+
+        .credentials {
+            font-family: "Pixelify Sans", sans-serif;
+            font-size: medium;
+        }
+
+        .details {
+            margin: 5px;
+            padding: 5px;
+            width: 320px;
+            height: 30px;
+            border: 2px solid rgb(30, 120, 136);
+            border-radius: 10px;
+            align-content: center;
+
+        }
+
+        .heisenberg {
+            color: rgb(148, 222, 231);
+        }
+
+        .btn {
+            color: rgba(148, 222, 231);
+            background-color: rgb(30, 120, 136);
+            border: 2px solid rgb(148, 222, 231);
+            border-radius: 30px;
+            margin: 10px top;
+            padding: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <div style="margin: auto;">
+            <img src="vada club.png" alt="nike" height="80px">
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="items">
+            <div class="accountinfo">
+                <div class="userimg">
+                    <img src="user.png" alt="user" height="70px">
+                </div>
+                <div class="credentials">
+                    NAME:
+                </div>
+                <div class="details">
+                    <div id="userInfoName"></div>
+                </div>
+                <div class="credentials">
+                    USERNAME:
+                </div>
+                <div class="details">
+                    <div id="userInfoUsrname"></div>
+                </div>
+                <div class="credentials">
+                    COLLEGE ID:
+                </div>
+                <div class="details">
+                    <div id="userInfoClgid"></div>
+                </div>
+                <div>
+                    <button class="btn" type="button" onclick="window.location.href='prjhotel.html';" >BOOK NOW</button>
+                </div>
+                <div class="heisenberg" id="userInfo"></div>
+            </div>
+        </div>
+        <div class="items2">
+            <div class="content">
+                <div class="item3">
+                    <img src="heisenberg2.png" alt="heisenberg" height="320px" width="520px">
+                </div>
+                <div class="item3">
+                    <div class="item4" style="font-size: xx-large;">
+                        TEAM VADA
+                    </div>
+                </div>
+                <div class="item3">
+                    <div class="item4">
+                        we provide you with the best cooks in town
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function getQueryParams() {
+            const params = {};
+            const queryString = window.location.search.substring(1);
+            const regex = /([^&=]+)=([^&]*)/g;
+            let m;
+
+            while (m = regex.exec(queryString)) {
+                params[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+
+            return params;
+        }
+
+        const params = getQueryParams();
+        const userInfoDiv = document.getElementById('userInfo');
+        const userInfoName = document.getElementById('userInfoName');
+        const userInfoClgid = document.getElementById('userInfoClgid');
+        const userInfoUsrname = document.getElementById('userInfoUsrname');
+
+        // Display user information
+        userInfoDiv.innerHTML = `
+            <p><strong>Name:</strong> ${params.name}</p>
+            <p><strong>College ID:</strong> ${params.clgid}</p>
+            <p><strong>Username:</strong> ${params.usrname}</p>
+        `;
+        userInfoName.innerHTML = `
+            ${params.name}
+        `;
+        userInfoClgid.innerHTML = `
+            ${params.clgid}
+        `;
+        userInfoUsrname.innerHTML = `
+            ${params.usrname}
+        `;
+    </script>
+</body>
+
+</html>

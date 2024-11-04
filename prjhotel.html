@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <title>VADA CLUB HOTELS</title>
+    <style>
+        body {
+            background-color: rgba(77, 189, 204, 0.522);
+        }
+
+        .nav {
+            display: flex;
+            height: 10vh;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .font {
+            font-family: "Pixelify Sans", sans-serif;
+            font-size: xx-large;
+        }
+
+        .items {
+            margin: 3px;
+            padding: 3px;
+        }
+
+        .items1 {
+            width: 700px;
+        }
+
+        .grid {
+            margin: 30px;
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 900px;
+            justify-content: center;
+            row-gap: 30px;
+        }
+
+        .layout {
+            height: 120px;
+            width: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            column-gap: 120px;
+        }
+
+        .layout1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 20px;
+        }
+
+        .content {
+            height: 120px;
+            width: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "DM Mono", monospace;
+            border: 2px solid rgb(174, 170, 170);
+            border-radius: 10px;
+            background-color: rgb(230, 230, 230);
+        }
+
+        button {
+            font-family: "DM Mono", monospace;
+            border: none;
+            background-color: rgb(230, 230, 230);
+            font-size: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="nav">
+            <div class=" items items1">
+                <img src="vada club.png" alt="nike" height="70px">
+            </div>
+            <div class="items">
+                <img src="language.png" alt="language" height="30px">
+            </div>
+            <div class="items">
+                <img src="" alt="" srcset="">
+            </div>
+        </div>
+        <div class="grid">
+            <div class="layout">
+                <div style="margin: 10px; padding: 10px;">
+                    <p class="font" style="margin: auto;">&nbsp;&nbsp;WELCOME TO <strong>VADA CLUB</strong></p>
+                    <br>
+                    <div>
+                        <p class="font" style="font-size: large; margin: auto;">Gets your seats booked anywhere, anytime
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="layout">
+                <div class="content">
+                    <button onclick="window.location.href='prjgeccanteen.html'">GECK CANTEEN</button>
+                </div>
+                <div class="content">
+                    <button onclick="window.location.href='prjindianexp.html'">INDIAN EXPRESS</button>
+                </div>
+                <div class="content">
+                    <button onclick="window.location.href='prjsooryodhayam.html'">SOORYODHAYAM</button>
+                </div>
+            </div>
+            <div class="layout">
+                <div class="content">
+                    <button onclick="window.location.href='prjwestcafe.html'">WEST CAFE</button>
+                </div>
+                <div class="content">
+                    <button onclick="window.location.href='prjmanjakada.html'">MANJAKADDA</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
